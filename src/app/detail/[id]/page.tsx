@@ -3,14 +3,8 @@
 import { useParams, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { getTermById, seasonInfo, allTerms } from '@/data/terms'
+import { getTermById, seasonInfo } from '@/data/terms'
 import { useState } from 'react'
-
-export function generateStaticParams() {
-  return allTerms.map((term) => ({
-    id: term.id,
-  }))
-}
 
 export default function DetailPage() {
   const params = useParams()
